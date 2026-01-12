@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>JUNTO EXECUTIVE SEARCH</title>
+<meta name="description" content="Executive Search com neutralidade, confidencialidade e responsabilidade pelo resultado."/>
+<style>
+:root{--teal:#208e9f;--teal2:#186b78;--ink:#1f2121;--txt:#2f3131;--mut:#6b7280;--line:#e9eaec;--soft:#f7f7f8;--cream:#fffcf9;--r:14px;--sh:0 10px 28px rgba(0,0,0,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:#fff;color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.h{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px}
+.brand{font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--ink);white-space:nowrap}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+nav a{font-size:12px;color:var(--mut);letter-spacing:.02em;padding:8px 0;border-bottom:2px solid transparent;transition:.18s}
+nav a:hover{color:var(--ink);border-bottom-color:rgba(32,142,159,.35)}
+nav a.cta{padding:10px 14px;border:1px solid rgba(32,142,159,.25);border-radius:999px;color:var(--teal);font-weight:900}
+nav a.cta:hover{background:rgba(32,142,159,.06);border-color:rgba(32,142,159,.55)}
+.hero{padding:96px 0 64px;background:linear-gradient(180deg,#fff 0%,#fff 55%,var(--soft) 100%)}
+.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,33,33,.55);margin-bottom:18px}
+h1{font-size:52px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin-bottom:18px;font-weight:900}
+.sub{font-size:16px;color:rgba(47,49,49,.88);max-width:62ch;margin-bottom:22px}
+.sub strong{color:var(--ink)}
+.sub small{display:block;margin-top:10px;color:rgba(47,49,49,.68);font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:12px;border:1px solid transparent;font-size:14px;font-weight:900;cursor:pointer;transition:.18s;user-select:none}
+.btn.primary{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(32,142,159,.18)}
+.btn.primary:hover{background:var(--teal2);transform:translateY(-2px)}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;border:1px solid rgba(47,49,49,.12);background:#fff;color:rgba(47,49,49,.82);font-size:12px;font-weight:900;transition:.18s}
+.pill:hover{border-color:rgba(32,142,159,.45);box-shadow:var(--sh);transform:translateY(-1px)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:22px}
+.card h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:12px}
+.card ul{list-style:none;display:grid;gap:10px}
+.card li{font-size:13px;color:rgba(47,49,49,.78);padding-left:16px;position:relative}
+.card li:before{content:"-";position:absolute;left:0;top:0;color:rgba(32,142,159,.95);font-weight:900}
+section{padding:84px 0;border-top:1px solid var(--line)}
+.soft{background:var(--soft)}
+.cream{background:var(--cream)}
+.t{font-size:30px;line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px;font-weight:900;text-align:center}
+.lead{font-size:15px;color:rgba(47,49,49,.78);text-align:center;max-width:86ch;margin:0 auto 44px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 10px 24px rgba(0,0,0,.04)}
+.panel h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:14px}
+.panel p{font-size:14px;color:rgba(47,49,49,.82);margin-bottom:14px}
+.panel p:last-child{margin-bottom:0}
+.badge{border-left:3px solid rgba(32,142,159,.55);padding:10px 12px;background:rgba(32,142,159,.04);border-radius:10px;font-size:13px;color:rgba(47,49,49,.82)}
+.stack{display:grid;gap:10px;margin-top:10px}
+.call{border:1px solid rgba(32,142,159,.25);background:linear-gradient(180deg,rgba(32,142,159,.06),rgba(32,142,159,.03));border-radius:var(--r);padding:22px}
+.call strong{color:var(--ink)}
+.call p{font-size:14px;color:rgba(47,49,49,.82);margin-top:10px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;min-height:170px}
+.num{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(32,142,159,.10);color:var(--teal);font-weight:900;margin-bottom:12px}
+.step h5{font-size:14px;color:var(--ink);margin-bottom:8px;font-weight:900}
+.step p{font-size:13px;color:rgba(47,49,49,.76)}
+.sel{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.sel h3{font-size:34px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin-bottom:14px;font-weight:900}
+.sel p{font-size:15px;color:rgba(47,49,49,.78);max-width:70ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.list{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px}
+.list h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:12px}
+.list ul{list-style:none;display:grid;gap:10px}
+.list li{font-size:13px;color:rgba(47,49,49,.78);padding-left:18px;position:relative}
+.list li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--teal);font-weight:900}
+.list.neg li:before{content:"\2717";color:#d32f2f}
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sector{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;font-weight:900;color:rgba(31,33,33,.92);font-size:13px;transition:.18s}
+.sector small{display:block;margin-top:6px;font-weight:900;color:rgba(47,49,49,.72);font-size:12px;line-height:1.4}
+.sector:hover{border-color:rgba(32,142,159,.45);transform:translateY(-2px);box-shadow:var(--sh)}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.n{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 16px}
+.n .v{font-size:34px;color:var(--teal);font-weight:900;margin-bottom:6px}
+.n .l{font-size:12px;color:rgba(47,49,49,.72);line-height:1.35;font-weight:900}
+.final{background:var(--txt);color:#fff;border-top:none;padding:92px 0}
+.final .t{color:#fff}
+.final .lead{color:rgba(255,255,255,.78)}
+.final .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.92)}
+.final .pill:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
+footer{background:#151718;color:rgba(255,255,255,.7);padding:42px 0;font-size:12px;border-top:1px solid rgba(255,255,255,.08)}
+footer strong{color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:10px}
+.f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}
+footer a{color:rgba(255,255,255,.82);border-bottom:1px solid rgba(255,255,255,.18)}
+footer a:hover{border-bottom-color:rgba(255,255,255,.45)}
+@media(max-width:1024px){h1{font-size:44px}.grid{grid-template-columns:1fr;gap:18px}.steps{grid-template-columns:repeat(2,1fr)}.nums{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(2,1fr)}.sel{grid-template-columns:1fr}}
+@media(max-width:640px){nav{display:none}.hero{padding:86px 0 48px}h1{font-size:34px}.t{font-size:26px}section{padding:64px 0}.two{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.sectors{grid-template-columns:1fr}.nums{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.f{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="h">
+      <div class="brand">JUNTO EXECUTIVE SEARCH</div>
+      <nav aria-label="Navegacao">
+        <a href="#porque">Por que</a>
+        <a href="#nda">NDA</a>
+        <a href="#como">Como</a>
+        <a href="#seletividade">Seletividade</a>
+        <a href="#setores">Setores</a>
+        <a class="cta" href="#conversa">Conversa</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="hero" id="conversa">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="kicker">High End Executive Search</div>
+        <h1>Decisoes de lideranca nao sao publicas.</h1>
+        <div class="sub">
+          <strong>Conectamos liderancas a organizacoes diante de decisoes que nao admitem erro.</strong>
+          <small>Executive Search com neutralidade, confidencialidade e responsabilidade pelo resultado.</small>
+        </div>
+        <a class="btn primary" href="#opcoes">Iniciar uma conversa estrategica</a>
+        <div class="opts" id="opcoes">
+          <!-- Substitua pelos links reais -->
+          <a class="pill" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp reservado</a>
+          <a class="pill" href="#video">Video em 30 min</a>
+          <a class="pill" href="mailto:contato@junto.com.br">E-mail direto ao socio</a>
+        </div>
+      </div>
+      <aside class="card" aria-label="Mandatos tipicos">
+        <h3>Mandatos tipicos</h3>
+        <ul>
+          <li>Substituicoes confidenciais de diretorias e C-level</li>
+          <li>Sucessao de fundadores e recomposicao de lideranca</li>
+          <li>Transicoes criticas com risco reputacional e operacional</li>
+          <li>Contextos em que o erro tem consequencia</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<section id="porque">
+  <div class="container">
+    <h2 class="t">Quando a decisao exige criterio, nao visibilidade.</h2>
+    <p class="lead">A JUNTO nao e acionada para preencher posicoes. Somos chamados quando o contexto e sensivel, o impacto e alto e a decisao precisa ser conduzida com absoluto cuidado.</p>
+
+    <div class="two">
+      <div class="panel">
+        <h4>O que chega ate nos</h4>
+        <p>Substituicoes confidenciais. Sucessao. Recomposicao em momentos criticos.</p>
+        <div class="stack">
+          <div class="badge">Substituicoes confidenciais de diretorias e C-level</div>
+          <div class="badge">Sucessao de fundadores e transicoes de governanca</div>
+          <div class="badge">Recomposicao de liderancas em cenarios de transformacao</div>
+          <div class="badge">Mandatos em que errar nao e uma opcao</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h4>Como pensamos</h4>
+        <p>Executive Search e, antes de tudo, governanca. Nosso trabalho e proteger o contexto e elevar o criterio da decisao.</p>
+        <p>Quando a escolha e sensivel, a conducao precisa ser neutra, confidencial e responsavel pelo resultado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nda" class="cream">
+  <div class="container">
+    <h2 class="t">Confidencialidade e governanca como padrao.</h2>
+    <p class="lead">Discricao nao e uma promessa. E um pre-requisito.</p>
+
+    <div class="two">
+      <div class="call">
+        <strong>Todos os nossos mandatos sao conduzidos sob acordos formais de confidencialidade (NDA).</strong>
+        <p>A protecao do contexto, das pessoas envolvidas e da organizacao faz parte do nosso trabalho.</p>
+      </div>
+      <div class="call">
+        <strong>Em trocas de diretorias e posicoes C-level, a JUNTO e frequentemente lembrada por conselhos, investidores e CEOs.</strong>
+        <p>Nao por exposicao. Mas por criterio, discricao e historico de decisoes bem conduzidas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="soft">
+  <div class="container">
+    <h2 class="t">Executive Search para decisoes reais.</h2>
+    <p class="lead">Uma abordagem discreta, direta e orientada por contexto.</p>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h5>Entendimento do contexto</h5><p>Compreensao profunda do negocio, do momento organizacional e da dinamica decisoria do board.</p></div>
+      <div class="step"><div class="num">2</div><h5>Mapeamento confidencial</h5><p>Identificacao de liderancas relevantes, muitas vezes fora do mercado e fora do radar publico.</p></div>
+      <div class="step"><div class="num">3</div><h5>Abordagem direta e discreta</h5><p>Conversas individuais, respeitosas e absolutamente confidenciais, sem ruido e sem exposicao.</p></div>
+      <div class="step"><div class="num">4</div><h5>Avaliacao de aderencia real</h5><p>Analise de competencia, timing, cultura e capacidade de entrega no contexto especifico.</p></div>
+      <div class="step"><div class="num">5</div><h5>Decisao e transicao</h5><p>Suporte a decisao final e acompanhamento da entrada do executivo nos ciclos iniciais.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="seletividade">
+  <div class="container">
+    <div class="sel">
+      <div>
+        <h3>Nao trabalhamos com todo mundo.<br/>E isso e uma escolha consciente.</h3>
+        <p>Acreditamos que Executive Search exige alinhamento, maturidade e responsabilidade compartilhada. Por isso, somos seletivos tanto quanto nossos clientes.</p>
+
+        <div class="cols">
+          <div class="list">
+            <h4>Trabalhamos quando</h4>
+            <ul>
+              <li>A busca e confidencial</li>
+              <li>O contexto e estrategico</li>
+              <li>O board esta alinhado</li>
+              <li>A decisao tem impacto real</li>
+            </ul>
+          </div>
+          <div class="list neg">
+            <h4>Nao trabalhamos quando</h4>
+            <ul>
+              <li>O objetivo e volume</li>
+              <li>A urgencia substitui o criterio</li>
+              <li>Falta clareza de mandato</li>
+              <li>Nao ha alinhamento decisorio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h4>O efeito da seletividade</h4>
+        <p>Quando o alinhamento existe, o processo e mais rapido, a decisao e mais solida e a transicao e mais segura.</p>
+        <p>Se o contexto nao permite criterio, a JUNTO prefere nao participar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="setores" class="cream">
+  <div class="container">
+    <h2 class="t">Setores de atuacao</h2>
+    <p class="lead">Atuamos em multiplos setores. O criterio e sempre o mesmo: lideranca no contexto certo.</p>
+
+    <div class="sectors">
+      <div class="sector">Tecnologia, SaaS e Plataformas Digitais<small>Escala, produto, dados, governanca e expansao.</small></div>
+      <div class="sector">Servicos Financeiros, Fintech e Banking<small>Ambientes regulados, risco e crescimento sustentavel.</small></div>
+      <div class="sector">Industria, Manufacturing e Bens de Capital<small>Eficiencia operacional, excelencia e transformacao.</small></div>
+      <div class="sector">Healthcare, Life Sciences e Pharma<small>Complexidade tecnica, compliance e inovacao.</small></div>
+      <div class="sector">Energia, Infraestrutura e Utilities<small>Projetos criticos, stakeholders e continuidade.</small></div>
+      <div class="sector">Varejo, Consumo e Servicos<small>Performance, execucao e experiencia do cliente.</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="t">Credibilidade silenciosa</h2>
+    <p class="lead">Numeros ajudam a ancorar reputacao. O restante e conduzido em sigilo.</p>
+
+    <div class="nums">
+      <div class="n"><div class="v">18+</div><div class="l">anos de relacionamento executivo</div></div>
+      <div class="n"><div class="v">+800</div><div class="l">mandatos de lideranca</div></div>
+      <div class="n"><div class="v">94%</div><div class="l">retencao apos 2+ anos</div></div>
+      <div class="n"><div class="v">100%</div><div class="l">confidencialidade</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="video">
+  <div class="container">
+    <h2 class="t">Voce esta diante de uma decisao sensivel.</h2>
+    <p class="lead">Se a decisao envolve risco, contexto e impacto real, comece por uma conversa estrategica.</p>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <a class="btn primary" href="#opcoes">Iniciar uma conversa estrategica</a>
+      <div class="opts">
+        <a class="pill" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp reservado</a>
+        <a class="pill" href="#" onclick="alert('Conecte aqui seu link de agenda (Calendly/Meet/Teams).');return false;">Agendar video em 30 min</a>
+        <a class="pill" href="mailto:contato@junto.com.br">E-mail direto ao socio</a>
+      </div>
+      <div style="margin-top:8px;font-size:12px;opacity:.75;text-align:center;max-width:62ch;">Conversas confidenciais. Sem compromisso. Com criterio.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f">
+      <div><strong>JUNTO EXECUTIVE SEARCH</strong>© 2026 - Todos os direitos reservados.</div>
+      <div>São Paulo, Brasil<br/><a href="mailto:contato@junto.com.br">contato@junto.com.br</a></div>
+      <div><a href="JUNTO-About-Item2.html">Sobre</a> &nbsp;•&nbsp; <a href="#">LinkedIn</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
