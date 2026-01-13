@@ -93,31 +93,10 @@
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeBtn = document.querySelector(".menu-close");
-  let isScrolled = false;
-  let ticking = false;
-  const updateScrolled = () => {
-    const y = window.scrollY;
-    if (!isScrolled && y > 80) {
-      isScrolled = true;
-      body.classList.add("is-scrolled");
-      return;
-    }
-    if (isScrolled && y < 20) {
-      isScrolled = false;
-      body.classList.remove("is-scrolled");
-    }
-  };
   const onScroll = () => {
-    if (ticking) {
-      return;
-    }
-    ticking = true;
-    window.requestAnimationFrame(() => {
-      updateScrolled();
-      ticking = false;
-    });
+    body.classList.toggle("is-scrolled", window.scrollY > 10);
   };
-  updateScrolled();
+  onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   if (toggle && menu) {
     const setOpen = (open) => {
