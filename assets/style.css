@@ -35,7 +35,7 @@ body.is-scrolled .menu-toggle{padding:6px 10px;font-size:10px}
 .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}
 .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,33,33,.55);margin-bottom:18px}
 h1{font-size:52px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin-bottom:18px;font-weight:900}
-.about-title{white-space:nowrap;font-size:clamp(20px,4vw,52px)}
+.about-title{white-space:nowrap;font-size:clamp(16px,3.2vw,42px)}
 .sub{font-size:16px;color:rgba(47,49,49,.88);max-width:62ch;margin-bottom:22px}
 .sub strong{color:var(--ink)}
 .sub small{display:block;margin-top:10px;color:rgba(47,49,49,.68);font-size:14px}
