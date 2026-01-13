@@ -8,7 +8,7 @@
 <meta name="author" content="JUNTO Executive Search"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://juntoexecutivesearch.com.br/sobre"/>
-<link rel="stylesheet" href="assets/style.css"/>
+<link rel="stylesheet" href="/assets/style.css"/>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
   <div class="container">
     <div class="h">
       <div class="brand">
-        <img src="img/logo.png" alt="JUNTO Executive Search"/>
+        <img src="/img/logo.png" alt="JUNTO Executive Search"/>
       </div>
       <nav aria-label="Navegação">
         <a href="/#porque">Por que</a>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <aside class="card" aria-label="Logo da JUNTO Executive Search">
-        <img src="img/logo.png" alt="JUNTO Executive Search" style="max-width:100%;height:auto;display:block;margin:0 auto;"/>
+        <img src="/img/logo.png" alt="JUNTO Executive Search" style="max-width:100%;height:auto;display:block;margin:0 auto;"/>
       </aside>
     </div>
   </div>
@@ -67,7 +67,7 @@
   <div class="container">
     <div class="f">
       <div>
-        <img class="footer-logo" src="img/logo_b.png" alt="JUNTO Executive Search"/>
+        <img class="footer-logo" src="/img/logo_b.png" alt="JUNTO Executive Search"/>
         <strong>JUNTO EXECUTIVE SEARCH</strong>© 2026 - Todos os direitos reservados.
       </div>
       <div class="footer-contact">
@@ -93,10 +93,31 @@
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeBtn = document.querySelector(".menu-close");
-  const onScroll = () => {
-    body.classList.toggle("is-scrolled", window.scrollY > 10);
+  let isScrolled = false;
+  let ticking = false;
+  const updateScrolled = () => {
+    const y = window.scrollY;
+    if (!isScrolled && y > 80) {
+      isScrolled = true;
+      body.classList.add("is-scrolled");
+      return;
+    }
+    if (isScrolled && y < 20) {
+      isScrolled = false;
+      body.classList.remove("is-scrolled");
+    }
   };
-  onScroll();
+  const onScroll = () => {
+    if (ticking) {
+      return;
+    }
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateScrolled();
+      ticking = false;
+    });
+  };
+  updateScrolled();
   window.addEventListener("scroll", onScroll, { passive: true });
   if (toggle && menu) {
     const setOpen = (open) => {
