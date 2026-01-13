@@ -17,6 +17,7 @@
     <div class="h">
       <a class="brand" href="/">
         <img src="/img/logo_s.png" alt="JUNTO Executive Search"/>
+        <span class="brand-text">Junto Executive Search</span>
       </a>
       <nav aria-label="Navegação">
         <a href="/#porque">Por que</a>
@@ -96,8 +97,27 @@
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeBtn = document.querySelector(".menu-close");
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="/#"], nav a[href^="#"]'));
+  const mobileLinks = Array.from(document.querySelectorAll('.mobile-menu a[href^="/#"], .mobile-menu a[href^="#"]'));
+  const allLinks = [...navLinks, ...mobileLinks];
   let isScrolled = false;
   let ticking = false;
+  const isAbout = window.location.pathname.replace(/\/$/, "") === "/sobre";
+  const getAnchorId = (link) => {
+    const href = link.getAttribute("href");
+    if (!href || !href.includes("#")) {
+      return null;
+    }
+    return href.split("#")[1] || null;
+  };
+  const setActiveById = (id) => {
+    if (!id) {
+      return;
+    }
+    allLinks.forEach((link) => {
+      link.classList.toggle("is-active", getAnchorId(link) === id);
+    });
+  };
   const updateScrolled = () => {
     const y = window.scrollY;
     if (!isScrolled && y > 80) {
@@ -122,6 +142,38 @@
   };
   updateScrolled();
   window.addEventListener("scroll", onScroll, { passive: true });
+  if (isAbout) {
+    document.querySelectorAll('a[href="/sobre"]').forEach((link) => {
+      link.classList.add("is-active");
+    });
+  } else if (allLinks.length) {
+    const sectionIds = Array.from(new Set(allLinks.map(getAnchorId).filter(Boolean)));
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+    if (sections.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveById(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: "-35% 0px -55% 0px", threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+      if (window.location.hash) {
+        setActiveById(window.location.hash.slice(1));
+      } else {
+        setActiveById(sections[0].id);
+      }
+      allLinks.forEach((link) => {
+        const id = getAnchorId(link);
+        if (id) {
+          link.addEventListener("click", () => setActiveById(id));
+        }
+      });
+    }
+  }
   if (toggle && menu) {
     const setOpen = (open) => {
       body.classList.toggle("menu-open", open);

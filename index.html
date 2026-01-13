@@ -73,6 +73,7 @@
     <div class="h">
       <a class="brand" href="/">
         <img src="img/logo_s.png" alt="JUNTO Executive Search"/>
+        <span class="brand-text">Junto Executive Search</span>
       </a>
       <nav aria-label="Navegação">
         <a href="/#porque">Por que</a>
@@ -114,10 +115,10 @@
           <strong>Conectamos lideranças a organizações diante de decisões que não admitem erro.</strong>
           <small>Executive Search com neutralidade, confidencialidade e responsabilidade pelo resultado.</small>
         </div>
-        <div class="context-call">Escolha abaixo a melhor forma de iniciarmos uma conversa estratégica</div>
+        <div class="context-call">Escolha abaixo a melhor forma de iniciarmos uma conversa confidencial</div>
         <div class="opts" id="opcoes">
           <!-- Substitua pelos links reais -->
-          <a class="pill" href="https://wa.me/5511917007799" target="_blank" rel="noopener">WhatsApp reservado</a>
+          <a class="pill" href="https://wa.me/5511917007799" target="_blank" rel="noopener">WhatsApp</a>
           <a class="pill" href="https://calendly.com/contato-juntoexecutivesearch/30min" target="_blank" rel="noopener">Agendar reunião por video</a>
           <a class="pill" href="mailto:ricardo.nogueira@juntoexecutivesearch.com.br" target="_blank" rel="noopener">E-mail direto ao sócio</a>
         </div>
@@ -200,7 +201,7 @@
       <div>
         <h3>Seletividade como princípio.</h3>
         <p>Processos de liderança exigem clareza de mandato, alinhamento decisório e responsabilidade compartilhada. São decisões que pedem critério, maturidade e leitura de contexto.</p>
-        <p>É nesse tipo de situação que a JUNTO atua.</p>
+        <p class="para-gap">É nesse tipo de situação que a JUNTO atua.</p>
 
       </div>
       <div class="panel">
@@ -272,9 +273,9 @@
     <p class="lead">Se a decisão envolve risco, contexto e impacto real, comece por uma conversa estratégica.</p>
 
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
-      <div class="context-call">Escolha abaixo a melhor forma de iniciarmos uma conversa estratégica</div>
+      <div class="context-call">Escolha abaixo a melhor forma de iniciarmos uma conversa confidencial</div>
       <div class="opts">
-        <a class="pill" href="https://wa.me/5511917007799" target="_blank" rel="noopener">WhatsApp reservado</a>
+        <a class="pill" href="https://wa.me/5511917007799" target="_blank" rel="noopener">WhatsApp</a>
         <a class="pill" href="https://calendly.com/contato-juntoexecutivesearch/30min" target="_blank" rel="noopener">Agendar reunião por video</a>
         <a class="pill" href="mailto:ricardo.nogueira@juntoexecutivesearch.com.br" target="_blank" rel="noopener">E-mail direto ao sócio</a>
       </div>
@@ -313,8 +314,27 @@
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeBtn = document.querySelector(".menu-close");
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="/#"], nav a[href^="#"]'));
+  const mobileLinks = Array.from(document.querySelectorAll('.mobile-menu a[href^="/#"], .mobile-menu a[href^="#"]'));
+  const allLinks = [...navLinks, ...mobileLinks];
   let isScrolled = false;
   let ticking = false;
+  const isAbout = window.location.pathname.replace(/\/$/, "") === "/sobre";
+  const getAnchorId = (link) => {
+    const href = link.getAttribute("href");
+    if (!href || !href.includes("#")) {
+      return null;
+    }
+    return href.split("#")[1] || null;
+  };
+  const setActiveById = (id) => {
+    if (!id) {
+      return;
+    }
+    allLinks.forEach((link) => {
+      link.classList.toggle("is-active", getAnchorId(link) === id);
+    });
+  };
   const updateScrolled = () => {
     const y = window.scrollY;
     if (!isScrolled && y > 80) {
@@ -339,6 +359,38 @@
   };
   updateScrolled();
   window.addEventListener("scroll", onScroll, { passive: true });
+  if (isAbout) {
+    document.querySelectorAll('a[href="/sobre"]').forEach((link) => {
+      link.classList.add("is-active");
+    });
+  } else if (allLinks.length) {
+    const sectionIds = Array.from(new Set(allLinks.map(getAnchorId).filter(Boolean)));
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+    if (sections.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveById(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: "-35% 0px -55% 0px", threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+      if (window.location.hash) {
+        setActiveById(window.location.hash.slice(1));
+      } else {
+        setActiveById(sections[0].id);
+      }
+      allLinks.forEach((link) => {
+        const id = getAnchorId(link);
+        if (id) {
+          link.addEventListener("click", () => setActiveById(id));
+        }
+      });
+    }
+  }
   if (toggle && menu) {
     const setOpen = (open) => {
       body.classList.toggle("menu-open", open);
