@@ -52,6 +52,9 @@ h1{font-size:52px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin
 .card li{font-size:13px;color:rgba(47,49,49,.78);padding-left:16px;position:relative}
 .card li:before{content:"-";position:absolute;left:0;top:0;color:rgba(32,142,159,.95);font-weight:900}
 .about-logo{max-width:70%;height:auto;display:block;margin:0 auto;opacity:1}
+.about-grid{align-items:center}
+.about-copy{text-align:center}
+.about-copy .sub{margin-left:auto;margin-right:auto}
 section{padding:84px 0;border-top:1px solid var(--line)}
 .soft{background:var(--soft)}
 .cream{background:var(--cream)}
