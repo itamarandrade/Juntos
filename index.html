@@ -329,11 +329,8 @@
     return href.split("#")[1] || null;
   };
   const setActiveById = (id) => {
-    if (!id) {
-      return;
-    }
     allLinks.forEach((link) => {
-      link.classList.toggle("is-active", getAnchorId(link) === id);
+      link.classList.toggle("is-active", id && getAnchorId(link) === id);
     });
   };
   const updateActiveOnScroll = () => {
@@ -341,14 +338,14 @@
       return;
     }
     const offset = window.innerHeight * 0.35;
-    let current = sections[0];
+    let current = null;
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= offset && rect.bottom > offset) {
         current = section;
       }
     });
-    setActiveById(current.id);
+    setActiveById(current ? current.id : null);
   };
   const updateScrolled = () => {
     const y = window.scrollY;
