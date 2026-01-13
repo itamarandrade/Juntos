@@ -64,7 +64,8 @@ h1{font-size:52px;line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin
 .about-grid{align-items:center}
 .about-copy{text-align:left}
 .about-copy .sub{margin-left:0;margin-right:0}
-section{padding:84px 0;border-top:1px solid var(--line);min-height:100vh}
+section{padding:84px 0;border-top:1px solid var(--line);min-height:100vh;display:flex;align-items:center}
+section > .container{width:100%}
 .soft{background:var(--soft)}
 .cream{background:var(--cream)}
 .t{font-size:30px;line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px;font-weight:900;text-align:center}

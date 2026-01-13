@@ -102,6 +102,7 @@
   const allLinks = [...navLinks, ...mobileLinks];
   let isScrolled = false;
   let ticking = false;
+  let sections = [];
   const isAbout = window.location.pathname.replace(/\/$/, "") === "/sobre";
   const getAnchorId = (link) => {
     const href = link.getAttribute("href");
@@ -117,6 +118,20 @@
     allLinks.forEach((link) => {
       link.classList.toggle("is-active", getAnchorId(link) === id);
     });
+  };
+  const updateActiveOnScroll = () => {
+    if (!sections.length) {
+      return;
+    }
+    const offset = window.innerHeight * 0.35;
+    let current = sections[0];
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= offset && rect.bottom > offset) {
+        current = section;
+      }
+    });
+    setActiveById(current.id);
   };
   const updateScrolled = () => {
     const y = window.scrollY;
@@ -137,10 +152,12 @@
     ticking = true;
     window.requestAnimationFrame(() => {
       updateScrolled();
+      updateActiveOnScroll();
       ticking = false;
     });
   };
   updateScrolled();
+  updateActiveOnScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   if (isAbout) {
     document.querySelectorAll('a[href="/sobre"]').forEach((link) => {
@@ -148,24 +165,9 @@
     });
   } else if (allLinks.length) {
     const sectionIds = Array.from(new Set(allLinks.map(getAnchorId).filter(Boolean)));
-    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+    sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
     if (sections.length) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveById(entry.target.id);
-            }
-          });
-        },
-        { rootMargin: "-35% 0px -55% 0px", threshold: 0.1 }
-      );
-      sections.forEach((section) => observer.observe(section));
-      if (window.location.hash) {
-        setActiveById(window.location.hash.slice(1));
-      } else {
-        setActiveById(sections[0].id);
-      }
+      updateActiveOnScroll();
       allLinks.forEach((link) => {
         const id = getAnchorId(link);
         if (id) {
