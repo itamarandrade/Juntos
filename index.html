@@ -75,13 +75,28 @@
         <img src="img/logo.png" alt="JUNTO Executive Search"/>
       </div>
       <nav aria-label="Navegação">
-        <a href="#porque">Por que</a>
-        <a href="#nda">NDA</a>
-        <a href="#como">Como</a>
-        <a href="#seletividade">Seletividade</a>
-        <a href="#setores">Setores</a>
+        <a href="/#porque">Por que</a>
+        <a href="/#nda">NDA</a>
+        <a href="/#como">Como</a>
+        <a href="/#seletividade">Seletividade</a>
+        <a href="/#setores">Setores</a>
         <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
       </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="bars" aria-hidden="true"></span>
+        Menu
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-top">
+        <button class="menu-close" type="button" aria-label="Fechar menu">Fechar</button>
+      </div>
+      <a href="/#porque">Por que</a>
+      <a href="/#nda">NDA</a>
+      <a href="/#como">Como</a>
+      <a href="/#seletividade">Seletividade</a>
+      <a href="/#setores">Setores</a>
+      <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
     </div>
   </div>
 </header>
@@ -282,12 +297,49 @@
         <a href="mailto:contato@juntoexecutivesearch.com.br">contato@juntoexecutivesearch.com.br</a>
       </div>
       <div class="footer-links">
-        <a href="sobre.html">Sobre</a>
+        <a href="/sobre">Sobre</a>
         <a href="https://www.linkedin.com/in/ricardonogueira1111/">LinkedIn</a>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+(() => {
+  const body = document.body;
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("#mobile-menu");
+  const closeBtn = document.querySelector(".menu-close");
+  const onScroll = () => {
+    body.classList.toggle("is-scrolled", window.scrollY > 10);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  if (toggle && menu) {
+    const setOpen = (open) => {
+      body.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      menu.setAttribute("aria-hidden", open ? "false" : "true");
+    };
+    toggle.addEventListener("click", () => {
+      setOpen(!body.classList.contains("menu-open"));
+    });
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => setOpen(false));
+    }
+    menu.addEventListener("click", (event) => {
+      if (event.target.matches("a")) {
+        setOpen(false);
+      }
+    });
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
