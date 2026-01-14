@@ -1,0 +1,48 @@
+marcar seçao no menu
+
+espaço maior no texto 
+
+4 colunas footer
+
+padronizar itens 
+
+padronizar altura das seções
+
+ajustar cta
+
+mudar para conversa confidencia no cta
+tira o reservado
+
+incluir texto no menu apos rolagem
+
+
+marcar seçao no menu:
+Ao clicar ou passar pela seção o menu tem que ficar com o item ativo :active
+
+espaço maior no texto:
+Processos de liderança exigem clareza de mandato, alinhamento decisório e responsabilidade compartilhada. São decisões que pedem critério, maturidade e leitura de contexto.
+
+É nesse tipo de situação que a JUNTO atua.
+
+pular linha apos contexto para dar espaço entre os paragrafos 
+
+3 colunas footer:
+Padronizar tamanha de colunas no footer para o texto não encostar um no outro 
+
+padronizar itens :
+use o mesmo estilo do css da classe sector na classe class
+
+e na classe sector remova o negrito do para elemento small 
+
+padronizar altura das seções:
+Deixe todas as seções para preencher a pagina toda assim nao aparecendo a proxima seção na tela 
+
+ajustar cta:
+Remova o estilo de botão do "Escolha abaixo a melhor forma de iniciarmos uma conversa estratégica" deixe o texto solto 
+mudar texto de "...uma conversar estrategica" para "...conversa confidencia"
+tira a palavra reservado do botão whatsapp
+
+incluir texto no menu apos rolagem:
+
+apos rolagem onde ficar o menu colocar o texto "Junto Executive Search"
+
