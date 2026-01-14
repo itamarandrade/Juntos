@@ -110,7 +110,7 @@ section > .container{width:100%}
 .final .context-call{color:rgba(255,255,255,.78)}
 .final .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.92)}
 .final .pill:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
-footer{background:#151718;color:rgba(255,255,255,.7);padding:42px 0;font-size:15px;line-height:1.6;border-top:1px solid rgba(255,255,255,.08)}
+footer{background:#151718;color:rgba(255,255,255,.7);padding:42px 0;font-size:13px;line-height:1.6;border-top:1px solid rgba(255,255,255,.08)}
 footer strong{color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size:12px;display:block;margin-bottom:10px}
 .f{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .footer-contact{display:grid;gap:8px}
