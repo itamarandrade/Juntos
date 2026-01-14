@@ -9,7 +9,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdro
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--ink);white-space:nowrap;min-height:96px;transition:gap .2s ease,min-height .2s ease}
 .brand img{height:70px;width:auto;display:block;transition:height .2s ease,opacity .2s ease,transform .2s ease}
 .brand-text{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;letter-spacing:.16em;text-transform:uppercase;font-size:11px;font-weight:900;color:var(--ink);transition:max-width .2s ease,opacity .2s ease,margin-left .2s ease}
-.footer-logo{height:80px;width:auto;display:block;margin-bottom:10px}
+.footer-logo{height:70px;width:auto;display:block;margin-bottom:10px}
 nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap;transition:gap .2s ease}
 nav a{font-size:12px;color:var(--mut);letter-spacing:.02em;padding:8px 0;border-bottom:2px solid transparent;transition:color .18s ease,border-bottom-color .18s ease,font-size .2s ease,padding .2s ease}
 nav a:hover{color:var(--ink);border-bottom-color:rgba(32,142,159,.35)}
