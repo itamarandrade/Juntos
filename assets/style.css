@@ -68,6 +68,7 @@ h1{font-size:var(--h1-size);line-height:var(--heading-line);letter-spacing:-.01e
 .about-copy .sub{margin-left:0;margin-right:0}
 section{padding:84px 0;border-top:1px solid var(--line);min-height:100vh;display:flex;align-items:center}
 section > .container{width:100%}
+.policy-page{min-height:auto;align-items:flex-start}
 .soft{background:var(--soft)}
 .cream{background:var(--cream)}
 .t,.sel h3{font-size:var(--h2-size);line-height:var(--heading-line);letter-spacing:-.01em;color:var(--ink);margin-bottom:14px;font-weight:900}
