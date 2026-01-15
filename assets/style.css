@@ -73,6 +73,13 @@ section > .container{width:100%}
 .t,.sel h3{font-size:var(--h2-size);line-height:var(--heading-line);letter-spacing:-.01em;color:var(--ink);margin-bottom:14px;font-weight:900}
 .t{text-align:center}
 .sel h3{text-align:left}
+.title-with-icon{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.title-with-icon .title-icon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;flex:0 0 auto;color:rgba(47,49,49,.72)}
+.title-with-icon .title-icon svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.5}
+.title-with-icon .title-text{flex:1 1 auto;min-width:0;text-align:inherit}
+.t.title-with-icon{justify-content:center}
+.sel h3.title-with-icon{justify-content:flex-start}
+.final .title-with-icon .title-icon{color:rgba(255,255,255,.85)}
 .t,.sel h3,h1,.about-title{text-wrap:balance;overflow-wrap:break-word}
 .lead{font-size:15px;color:rgba(47,49,49,.78);text-align:center;max-width:86ch;margin:0 auto 44px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
