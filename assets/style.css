@@ -144,12 +144,11 @@ footer strong{color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size
 .f{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .footer-contact{display:grid;gap:8px}
 .footer-links{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.footer-legal{font-size:12px;opacity:.7}
-.footer-legal:hover{opacity:1}
+.footer-legal{font-size:12px}
 .footer-address{display:grid;gap:4px;line-height:1.6;word-break:break-word}
 .address-line{display:block}
-footer a{color:rgba(255,255,255,.82);border-bottom:1px solid rgba(255,255,255,.18)}
-footer a:hover{border-bottom-color:rgba(255,255,255,.45)}
+footer a{color:rgba(255,255,255,.82)}
+footer a:hover{color:#fff}
 @media(max-width:1024px){.grid{grid-template-columns:1fr;gap:18px}.steps{grid-template-columns:repeat(2,1fr)}.nums{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(2,1fr)}.sel{grid-template-columns:1fr}}
 @media(max-width:640px){nav{display:none}.menu-toggle{display:inline-flex}.mobile-menu{display:flex}.hero{padding:86px 0 48px}section{padding:64px 0}.two{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.sectors{grid-template-columns:1fr}.nums{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.f{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
