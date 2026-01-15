@@ -39,7 +39,9 @@ body.is-scrolled nav{gap:16px}
 body.is-scrolled nav a{font-size:11px}
 body.is-scrolled nav a.cta{padding:8px 12px}
 body.is-scrolled .menu-toggle{padding:6px 10px;font-size:10px}
-.hero{padding:96px 0 64px;min-height:100vh;background-image:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 55%,rgba(247,247,248,.95) 100%),url("../img/6936955311_45cc936f99_b.jpg");background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero{position:relative;padding:96px 0 64px;min-height:100vh}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(18,18,18,.5) 0%,rgba(18,18,18,.5) 100%),url("../img/fundo.jpeg");background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(.8) contrast(1.05)}
+.hero > .container{position:relative;z-index:1}
 .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}
 .card-stack{display:grid;gap:16px;align-items:start}
 .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,33,33,.55);margin-bottom:18px}
