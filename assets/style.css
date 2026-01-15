@@ -52,7 +52,7 @@ body.is-scrolled .menu-toggle{padding:6px 10px;font-size:10px}
 .card-stack{display:grid;gap:16px;align-items:start}
 .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(31,33,33,.55);margin-bottom:18px}
 h1{font-size:var(--h1-size);line-height:var(--heading-line);letter-spacing:-.01em;color:var(--ink);margin-bottom:18px;font-weight:900}
-.about-title{white-space:normal;font-size:var(--h1-size);line-height:var(--heading-line)}
+.about-title{white-space:normal;font-size:var(--h2-size);line-height:var(--heading-line)}
 .sub{font-size:16px;color:rgba(47,49,49,.88);max-width:62ch;margin-bottom:22px}
 .sub strong{color:var(--ink)}
 .sub small{display:block;margin-top:10px;color:rgba(47,49,49,.68);font-size:14px}
@@ -98,6 +98,9 @@ section > .container{width:100%}
 .para-gap{margin-top:18px}
 .badge{padding:6px 0;border-left:0;background:transparent;border-radius:0;font-size:13px;color:rgba(47,49,49,.78)}
 .stack{display:grid;gap:10px;margin-top:10px}
+.bullet-list{list-style:none;display:grid;gap:8px;margin-top:10px}
+.bullet-list li{font-size:13px;color:rgba(47,49,49,.78);padding-left:16px;position:relative;line-height:1.5}
+.bullet-list li:before{content:"•";position:absolute;left:0;top:.1em;color:rgba(47,49,49,.45);font-weight:400}
 .call,.sector{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;font-weight:900;color:rgba(31,33,33,.92);font-size:13px;transition:.18s}
 .call strong{display:block;color:rgba(31,33,33,.92);font-weight:900}
 .call p,.sector small{display:block;margin-top:6px;font-weight:400;color:rgba(47,49,49,.72);font-size:12px;line-height:1.4}
@@ -128,7 +131,7 @@ section > .container{width:100%}
 .final .pill:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
 .role-card p{font-size:14px;color:rgba(47,49,49,.82);line-height:1.6;margin-bottom:12px}
 .role-card p:last-child{margin-bottom:0}
-.policy{max-width:86ch;margin:0 auto;text-align:left}
+.policy{max-width:64ch;margin:0 auto;text-align:left}
 .policy p{font-size:14px;color:rgba(47,49,49,.78);line-height:1.7;margin-bottom:12px}
 .policy-item{margin-top:18px}
 .policy-item h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:8px;font-weight:800}
