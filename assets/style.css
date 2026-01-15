@@ -110,7 +110,7 @@ section > .container{width:100%}
 .n .v{font-size:34px;color:var(--teal);font-weight:900;margin-bottom:6px}
 .n .l{font-size:12px;color:rgba(47,49,49,.72);line-height:1.35;font-weight:900}
 .final{background:var(--txt);color:#fff;border-top:none;padding:92px 0}
-.final .t{color:#fff}
+.final .t{color:#fff;text-align:center}
 .final .lead{color:rgba(255,255,255,.78)}
 .final .context-call{color:rgba(255,255,255,.78)}
 .final .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.92)}
