@@ -76,10 +76,11 @@ section > .container{width:100%}
 .title-with-icon{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;justify-content:flex-start;text-align:left}
 .title-with-icon .title-icon{display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em;flex:0 0 auto;color:rgba(47,49,49,.72)}
 .title-with-icon .title-icon svg{width:1em;height:1em;stroke:currentColor;stroke-width:1.5}
+.title-with-icon .title-icon i{font-size:1em;line-height:1}
 .title-with-icon .title-text{flex:1 1 auto;min-width:0;text-align:inherit}
 .final .title-with-icon .title-icon{color:rgba(255,255,255,.85)}
 .t,.sel h3,h1,.about-title{text-wrap:balance;overflow-wrap:break-word}
-.lead{font-size:15px;color:rgba(47,49,49,.78);text-align:center;max-width:86ch;margin:0 auto 44px}
+.lead{font-size:15px;color:rgba(47,49,49,.78);text-align:left;max-width:86ch;margin:0 0 44px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 10px 24px rgba(0,0,0,.04)}
 .panel p{font-size:14px;color:rgba(47,49,49,.82);margin-bottom:14px;line-height:1.6}
@@ -111,7 +112,7 @@ section > .container{width:100%}
 .n .l{font-size:12px;color:rgba(47,49,49,.72);line-height:1.35;font-weight:900}
 .final{background:var(--txt);color:#fff;border-top:none;padding:92px 0}
 .final .t{color:#fff;text-align:center}
-.final .lead{color:rgba(255,255,255,.78)}
+.final .lead{color:rgba(255,255,255,.78);text-align:center;margin:0 auto 44px}
 .final .context-call{color:rgba(255,255,255,.78)}
 .final .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.92)}
 .final .pill:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
