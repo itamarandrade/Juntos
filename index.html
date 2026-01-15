@@ -82,7 +82,7 @@
         <a href="/#seletividade">Seletividade</a>
         <a href="/#setores">Setores</a>
         <a href="/#credibilidade">Credibilidade</a>
-        <a href="/sobre">Sobre</a>
+        <a href="/#sobre">Sobre</a>
         <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
@@ -102,7 +102,7 @@
   <a href="/#seletividade">Seletividade</a>
   <a href="/#setores">Setores</a>
   <a href="/#credibilidade">Credibilidade</a>
-  <a href="/sobre">Sobre</a>
+  <a href="/#sobre">Sobre</a>
   <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
 </div>
 
@@ -404,7 +404,7 @@
   updateActiveOnScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   if (isAbout) {
-    document.querySelectorAll('a[href="/sobre"]').forEach((link) => {
+    document.querySelectorAll('a[href="/#sobre"], a[href="/sobre"]').forEach((link) => {
       link.classList.add("is-active");
     });
   } else if (allLinks.length) {
