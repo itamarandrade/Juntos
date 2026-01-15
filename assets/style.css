@@ -82,6 +82,7 @@ section > .container{width:100%}
 .t,.sel h3,h1,.about-title{text-wrap:balance;overflow-wrap:break-word}
 .lead{font-size:15px;color:rgba(47,49,49,.78);text-align:left;max-width:86ch;margin:0 0 44px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.panel-stack{display:grid;gap:28px}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 10px 24px rgba(0,0,0,.04)}
 .panel p{font-size:14px;color:rgba(47,49,49,.82);margin-bottom:14px;line-height:1.6}
 .panel p:last-child{margin-bottom:0}
