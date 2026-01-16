@@ -132,8 +132,8 @@ section > .container{width:100%}
 .final .pill:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
 .role-card p{font-size:14px;color:rgba(47,49,49,.82);line-height:1.6;margin-bottom:12px}
 .role-card p:last-child{margin-bottom:0}
-.policy{max-width:64ch;margin:0 auto;text-align:left}
-.policy p{font-size:15px;color:rgba(47,49,49,.78);line-height:1.7;margin-bottom:12px}
+.policy{max-width:110ch;margin:0 auto;text-align:left}
+.policy p{font-size:17px;color:rgba(47,49,49,.78);line-height:1.7;margin-bottom:12px}
 .policy-item{margin-top:18px}
 .policy-item h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:8px;font-weight:800}
 .policy ul{margin-bottom:12px}
