@@ -154,6 +154,7 @@ footer a:hover{color:#fff}
         backdrop-filter: saturate(0%) blur(0px);
         border-bottom: 0px solid var(--line);
         position:sticky;top:0;z-index:10;background:rgba(255,255,255,0);transition:box-shadow .2s ease}
+    body.is-scrolled header{background:#fff;border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(10px)}
     .grid{grid-template-columns:1fr;gap:18px}.steps{grid-template-columns:repeat(2,1fr)}.nums{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(2,1fr)}.sel{grid-template-columns:1fr}
     .hero::before{background-position:center 25%;background-attachment:fixed}}
 @media(max-width:640px){
@@ -161,6 +162,7 @@ footer a:hover{color:#fff}
         backdrop-filter: saturate(0%) blur(0px);
         border-bottom: 0px solid var(--line);
         position:sticky;top:0;z-index:10;background:rgba(255,255,255,0);transition:box-shadow .2s ease}
+    body.is-scrolled header{background:#fff;border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(10px)}
     nav{display:none}.menu-toggle{display:inline-flex}.mobile-menu{display:flex}
     .hero{
         padding: 113px 0 48px;

@@ -176,6 +176,12 @@
   let ticking = false;
   let sections = [];
   const isAbout = window.location.pathname.replace(/\/$/, "") === "/sobre";
+  const getScrollThresholds = () => {
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      return { enter: 1, exit: 0 };
+    }
+    return { enter: 80, exit: 20 };
+  };
   const getAnchorId = (link) => {
     const href = link.getAttribute("href");
     if (!href || !href.includes("#")) {
@@ -204,12 +210,13 @@
   };
   const updateScrolled = () => {
     const y = window.scrollY;
-    if (!isScrolled && y > 80) {
+    const thresholds = getScrollThresholds();
+    if (!isScrolled && y > thresholds.enter) {
       isScrolled = true;
       body.classList.add("is-scrolled");
       return;
     }
-    if (isScrolled && y < 20) {
+    if (isScrolled && y <= thresholds.exit) {
       isScrolled = false;
       body.classList.remove("is-scrolled");
     }
