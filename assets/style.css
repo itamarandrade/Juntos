@@ -92,7 +92,7 @@ section > .container{width:100%}
 .title-with-icon .title-icon i{font-size:1em;line-height:1}
 .title-with-icon .title-text{flex:1 1 auto;min-width:0;text-align:inherit}
 .final .title-with-icon .title-icon{color:rgba(255,255,255,.85)}
-.t,.sel h3,h1,.about-title{text-wrap:balance;overflow-wrap:break-word}
+.t,.sel h3,h1{text-wrap:balance;overflow-wrap:break-word}
 .lead{font-size:15px;color:rgba(47,49,49,.78);text-align:left;max-width:86ch;margin:0 0 44px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .panel-stack{display:grid;gap:28px}
