@@ -88,6 +88,7 @@ section > .container{width:100%}
 .title-with-icon{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;justify-content:flex-start;text-align:left;font-size:var(--h2-size);line-height:var(--heading-line)}
 .title-with-icon .title-icon{display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em;flex:0 0 auto;color:rgba(47,49,49,.72)}
 .title-with-icon .title-icon svg{width:1em;height:1em;stroke:currentColor;stroke-width:1.5}
+.title-with-icon .title-icon img{width:1em;height:1em;display:block;object-fit:contain}
 .title-with-icon .title-icon i{font-size:1em;line-height:1}
 .title-with-icon .title-text{flex:1 1 auto;min-width:0;text-align:inherit}
 .final .title-with-icon .title-icon{color:rgba(255,255,255,.85)}
@@ -105,7 +106,6 @@ section > .container{width:100%}
 .call,.sector{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;font-weight:900;color:rgba(31,33,33,.92);font-size:13px;transition:.18s}
 .call strong{display:block;color:rgba(31,33,33,.92);font-weight:900;font-size:13px}
 .call p,.sector small{display:block;margin-top:6px;font-weight:400;color:rgba(47,49,49,.72);font-size:14px;line-height:1.6}
-.call:hover,.sector:hover{border-color:rgba(32,142,159,.45);transform:translateY(-2px);box-shadow:var(--sh)}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;min-height:170px}
 .num{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(32,142,159,.10);color:var(--teal);font-weight:900;margin-bottom:12px}
