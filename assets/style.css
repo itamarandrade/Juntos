@@ -64,7 +64,7 @@ section .kicker,section .sub,section .sub small,section .context-call{font-size:
 .btn.primary:hover{background:var(--teal2);transform:translateY(-2px)}
 .context-call{display:block;padding:0;border:none;background:transparent;font-size:13px;font-weight:700;color:rgba(47,49,49,.78)}
 .opts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;border:1px solid rgba(47,49,49,.12);background:#fff5c1;color:rgba(47,49,49,.82);font-size:12px;font-weight:900;transition:.18s}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;border:1px solid rgba(47,49,49,.12);background:#f7f7f8;color:rgba(47,49,49,.82);font-size:12px;font-weight:900;transition:.18s}
 .pill:hover{border-color:rgba(32,142,159,.45);box-shadow:var(--sh);transform:translateY(-1px)}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:22px}
 .card h3,.panel h4,.list h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(47,49,49,.72);margin-bottom:12px;font-weight:900}
