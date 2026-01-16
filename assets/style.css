@@ -102,7 +102,7 @@ section > .container{width:100%}
 .badge{padding:6px 0;border-left:0;background:transparent;border-radius:0;font-size:13px;color:rgba(47,49,49,.78)}
 .stack{display:grid;gap:10px;margin-top:10px}
 .bullet-list{margin-top:10px}
-.call,.sector{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;font-weight:900;color:rgba(31,33,33,.92);font-size:14px;transition:.18s}
+.call,.sector{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;font-weight:900;color:rgba(31,33,33,.92);font-size:13px;transition:.18s}
 .call strong{display:block;color:rgba(31,33,33,.92);font-weight:900;font-size:13px}
 .call p,.sector small{display:block;margin-top:6px;font-weight:400;color:rgba(47,49,49,.72);font-size:14px;line-height:1.6}
 .call:hover,.sector:hover{border-color:rgba(32,142,159,.45);transform:translateY(-2px);box-shadow:var(--sh)}
@@ -113,6 +113,7 @@ section > .container{width:100%}
 .step p{font-size:14px;color:rgba(47,49,49,.76);line-height:1.6}
 .sel{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
 .sel p{font-size:15px;color:rgba(47,49,49,.78);max-width:70ch}
+.sel .panel p{font-size:14px;line-height:1.6}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
 .list{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 16px}
 .list.neg li:before{content:"-";color:rgba(32,142,159,.95);font-weight:900}
