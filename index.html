@@ -9,6 +9,9 @@
 <meta name="author" content="JUNTO Executive Search"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://juntoexecutivesearch.com.br/"/>
+<link rel="alternate" hreflang="pt-BR" href="https://juntoexecutivesearch.com.br/"/>
+<link rel="alternate" hreflang="en" href="https://juntoexecutivesearch.com.br/en/"/>
+<link rel="alternate" hreflang="x-default" href="https://juntoexecutivesearch.com.br/"/>
 
 <!-- Open Graph -->
 <meta property="og:title" content="JUNTO Executive Search - Recrutamento Executivo Confidencial"/>
@@ -17,6 +20,7 @@
 <meta property="og:url" content="https://juntoexecutivesearch.com.br/"/>
 <meta property="og:image" content="https://juntoexecutivesearch.com.br/og-image.jpg"/>
 <meta property="og:locale" content="pt_BR"/>
+<meta property="og:locale:alternate" content="en_US"/>
 <meta property="og:site_name" content="JUNTO Executive Search"/>
 
 <!-- Twitter Cards -->
@@ -85,6 +89,7 @@
         <a href="/#credibilidade">Credibilidade</a>
         <a href="/#sobre">Sobre</a>
         <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
+        <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
         <span class="bars" aria-hidden="true"></span>
@@ -105,6 +110,7 @@
   <a href="/#credibilidade">Credibilidade</a>
   <a href="/#sobre">Sobre</a>
   <a class="cta" href="https://wa.me/5511917007799" target="_blank" rel="noopener">Conversa</a>
+  <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
 </div>
 
 <main class="hero" id="conversa" role="main">
@@ -391,8 +397,8 @@
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeBtn = document.querySelector(".menu-close");
-  const navLinks = Array.from(document.querySelectorAll('nav a[href^="/#"], nav a[href^="#"]'));
-  const mobileLinks = Array.from(document.querySelectorAll('.mobile-menu a[href^="/#"], .mobile-menu a[href^="#"]'));
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="/#"], nav a[href^="#"], nav a[href^="/en/#"]'));
+  const mobileLinks = Array.from(document.querySelectorAll('.mobile-menu a[href^="/#"], .mobile-menu a[href^="#"], .mobile-menu a[href^="/en/#"]'));
   const allLinks = [...navLinks, ...mobileLinks];
   let isScrolled = false;
   let ticking = false;
@@ -458,7 +464,7 @@
   updateActiveOnScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   if (isAbout) {
-    document.querySelectorAll('a[href="/#sobre"], a[href="/sobre"]').forEach((link) => {
+    document.querySelectorAll('a[href="/#sobre"], a[href="/sobre"], a[href="/en/#sobre"]').forEach((link) => {
       link.classList.add("is-active");
     });
   } else if (allLinks.length) {
