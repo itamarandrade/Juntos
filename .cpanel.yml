@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/rica9721/webapps/executive
+    - /bin/cp -af index.html privacidade.html $DEPLOYPATH/
+    - /bin/cp -af en img assets $DEPLOYPATH/
