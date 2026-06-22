@@ -164,7 +164,7 @@ footer a:hover{color:#fff}
     body.is-scrolled .brand-text{max-width:200px;font-size:9px;margin-left:4px}
     body.is-scrolled .menu-toggle{padding:4px 8px;font-size:9px}
     .grid{grid-template-columns:1fr;gap:18px}.steps{grid-template-columns:repeat(2,1fr)}.nums{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(2,1fr)}.sel{grid-template-columns:1fr}
-    .hero::before{background-position:center 25%;background-attachment:fixed}}
+    .hero::before{background-position:center 25%}}
 @media(max-width:640px){
      header{
         backdrop-filter: saturate(0%) blur(0px);
@@ -179,7 +179,7 @@ footer a:hover{color:#fff}
     .hero{
         padding: 113px 0 48px;
         margin: -56px 0px;
-    }.hero::before{background-position:center top;background-attachment:fixed;background-image:linear-gradient(180deg,rgba(18,18,18,.3) 0%,rgba(18,18,18,.5) 100%),url("../img/bg-mobile.png")}section{padding:40px 0;min-height:auto}#porque{padding-top:96px}.final{padding:40px 0}.two{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.sectors{grid-template-columns:1fr}.nums{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.f{grid-template-columns:1fr}}
+    }.hero::before{background-position:center top;background-image:linear-gradient(180deg,rgba(18,18,18,.3) 0%,rgba(18,18,18,.5) 100%),url("../img/bg-mobile.png")}section{padding:40px 0;min-height:auto}#porque{padding-top:96px}.final{padding:40px 0}.two{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.sectors{grid-template-columns:1fr}.nums{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.f{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ── Financial Services section ───────────────────────── */
@@ -202,10 +202,10 @@ footer a:hover{color:#fff}
 .fs-advisory-note{margin-top:28px;font-size:15.5px;color:rgba(47,49,49,.72);max-width:790px;line-height:1.7}
 
 /* Leadership profiles in #sobre */
-.leadership-section{margin-top:60px;border-top:1px solid var(--line);padding-top:52px}
+.leadership-section{margin-top:60px;border-top:1px solid var(--line);padding-top:52px;scroll-margin-top:90px}
 .leadership-section-head{margin-bottom:44px}
 .profile-row{display:grid;grid-template-columns:330px minmax(0,520px);gap:86px;align-items:center;margin:0 0 96px}
-.profile-row.reverse{grid-template-columns:minmax(0,520px) 330px;margin-left:220px}
+.profile-row.reverse{grid-template-columns:minmax(0,520px) 330px}
 .profile-row.reverse .profile-photo{order:2}
 .profile-row.reverse .profile-copy{order:1}
 .profile-photo-placeholder{border-radius:var(--r);background:linear-gradient(135deg,rgba(0,0,0,.06),rgba(0,0,0,.02)),repeating-linear-gradient(45deg,#ece8df,#ece8df 10px,#f5f2ec 10px,#f5f2ec 20px);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:#888;font-size:11px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;font-weight:800;aspect-ratio:3/4;min-height:260px}
