@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/rica9721/webapps/executive
-    - /bin/cp -af index.html privacidade.html robots.txt sitemap.xml og-image.jpg logo.png favicon.svg favicon.png favicon-32x32.png apple-touch-icon.png $DEPLOYPATH/
+    - /bin/cp -af index.html privacidade.html robots.txt sitemap.xml og-image.jpg logo.png favicon.svg favicon.png favicon-32x32.png apple-touch-icon.png .htaccess $DEPLOYPATH/
     - /bin/cp -af en img assets $DEPLOYPATH/

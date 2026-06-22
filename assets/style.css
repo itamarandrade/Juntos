@@ -1,4 +1,4 @@
-:root{--teal:#208e9f;--teal2:#186b78;--ink:#1f2121;--txt:#2f3131;--mut:#6b7280;--line:#e9eaec;--soft:#f7f7f8;--cream:#fffcf9;--r:14px;--sh:0 10px 28px rgba(0,0,0,.06);--h1-size:clamp(30px,2.2vw + 16px,40px);--h2-size:32px;--heading-line:1.15}
+:root{--teal:#208e9f;--teal2:#186b78;--ink:#1f2121;--txt:#2f3131;--mut:#6b7280;--line:#e9eaec;--soft:#f7f7f8;--cream:#fffcf9;--r:14px;--sh:0 10px 28px rgba(0,0,0,.06);--h1-size:clamp(34px,2.4vw + 18px,46px);--h2-size:37px;--heading-line:1.15}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:#fff;color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
@@ -83,7 +83,7 @@ section .kicker,section .sub,section .sub small,section .context-call{font-size:
 .about-grid{align-items:center}
 .about-copy{text-align:left}
 .about-copy .sub{margin-left:0;margin-right:0}
-section{padding:105px 0;border-top:1px solid var(--line);min-height:100vh;display:flex;align-items:center}
+section{padding:84px 0;border-top:1px solid var(--line)}
 section > .container{width:100%}
 .policy-page{min-height:auto;align-items:flex-start}
 .soft{background:var(--soft)}
@@ -235,3 +235,26 @@ footer a:hover{color:#fff}
   .fs-cta-strip-inner{grid-template-columns:1fr;gap:22px}
   .fs-cta-btn{justify-self:start}
 }
+
+/* === Escala tipografica aumentada (22/06) — corpo das secoes ~+12% === */
+.kicker{font-size:12px}
+section .kicker,section .sub,section .sub small,section .context-call{font-size:16px}
+.sub{font-size:18px}
+.sub small{font-size:15px}
+.lead{font-size:17px}
+.card p,.role-card p{font-size:15px}
+.card li,.panel li,.list li,.policy li,.bullet-list li{font-size:15.5px}
+.panel p,.sel .panel p{font-size:16px}
+.card h3,.panel h4,.list h4{font-size:14px}
+.sel p{font-size:17px}
+.step h5{font-size:14px}
+.step p{font-size:15.5px}
+.call,.sector,.call strong{font-size:14px}
+.call p,.sector small{font-size:15px}
+.context-call{font-size:14.5px}
+.badge{font-size:14px}
+.pill{font-size:13px}
+.n .v{font-size:38px}
+.n .l{font-size:13px}
+.fs-advisory-grid .panel h4{font-size:19px;letter-spacing:normal;text-transform:none;color:var(--ink);margin-bottom:13px}
+.fs-advisory-note{font-size:16px}
